@@ -1,0 +1,81 @@
+PASS Four separately authored models and editable profiles
+PASS Each family has complete independent anatomy
+PASS Title still has only two texts
+PASS Curved screen incision: 鳃鳞鲈 / Skin_0 · 可操作
+PASS Curved screen incision: 鳃鳞鲈 / Skin_1 · 可操作
+PASS Curved screen incision: 鳃鳞鲈 / Skin_2 · 可操作
+PASS Curved screen incision: 鳃鳞鲈 / Flesh_0 · 可操作
+PASS Curved screen incision: 鳃鳞鲈 / Flesh_1 · 可操作
+PASS Ray-picked drag / Bone
+PASS Ray-picked drag / Bone
+PASS Ray-picked drag / Bone
+PASS Ray-picked drag / Organ
+PASS Ray-picked drag / Organ
+PASS Ray-picked drag / Organ
+PASS Ray-picked drag / Core
+PASS Clean basic fish provides a meat-order batch
+PASS Keep meat for a higher-value order
+PASS Intact core can satisfy next order
+PASS No duplicate sale
+PASS Orders fund equipment using normal earnings
+PASS Choose armored delivery
+PASS Armor has its own shell and thicker bones
+PASS Curved screen incision: 锈甲魟 / Skin_0 · 可操作
+PASS Curved screen incision: 锈甲魟 / Skin_1 · 可操作
+PASS Curved screen incision: 锈甲魟 / Skin_2 · 可操作
+PASS Curved screen incision: 锈甲魟 / Flesh_0 · 可操作
+PASS Curved screen incision: 锈甲魟 / Flesh_1 · 可操作
+PASS Ray-picked drag / Bone
+PASS Ray-picked drag / Bone
+PASS Ray-picked drag / Bone
+PASS Ray-picked drag / Organ
+PASS Ray-picked drag / Organ
+PASS Ray-picked drag / Organ
+PASS Ray-picked drag / Core
+PASS Orders unlock venom family
+PASS Curved screen incision: 灯囊鳗 / Skin_0 · 可操作
+PASS Curved screen incision: 灯囊鳗 / Skin_1 · 可操作
+PASS Curved screen incision: 灯囊鳗 / Skin_2 · 可操作
+PASS Curved screen incision: 灯囊鳗 / Flesh_0 · 可操作
+PASS Curved screen incision: 灯囊鳗 / Flesh_1 · 可操作
+PASS Ray-picked drag / Bone
+PASS Ray-picked drag / Bone
+PASS Ray-picked drag / Bone
+PASS Poison sac has visible specific anatomy
+PASS Ray-picked drag / Organ toxic
+PASS Wrong tray contamination reduces purity
+PASS Ray-picked drag / Organ
+PASS Ray-picked drag / Organ
+PASS Ray-picked drag / Core
+PASS Damage changes actual crystal price and quality
+PASS Advanced orders unlock crystal ray
+PASS Fragile ray uses a different bone threshold
+PASS Curved screen incision: 棘晶鳐 / Skin_0 · 可操作
+PASS Curved screen incision: 棘晶鳐 / Skin_1 · 可操作
+PASS Curved screen incision: 棘晶鳐 / Skin_2 · 可操作
+PASS Curved screen incision: 棘晶鳐 / Flesh_0 · 可操作
+PASS Curved screen incision: 棘晶鳐 / Flesh_1 · 可操作
+PASS Ray-picked drag / Bone
+PASS Ray-picked drag / Bone
+PASS Ray-picked drag / Bone
+PASS Ray-picked drag / Organ
+PASS Ray-picked drag / Organ
+PASS Ray-picked drag / Organ
+PASS Ray-picked drag / Core
+PASS Automation competes for research materials
+PASS Automatic peeling can be disabled for delicate stock
+PASS Select vulnerable fish after automation
+PASS Fast automatic peeling sacrifices delicate-fish purity
+PASS Curved screen incision: 灯囊鳗 / Flesh_0 · 可操作
+PASS Curved screen incision: 灯囊鳗 / Flesh_1 · 可操作
+PASS Ray-picked drag / Bone
+PASS Ray-picked drag / Bone
+PASS Ray-picked drag / Bone
+PASS Ray-picked drag / Organ
+PASS Ray-picked drag / Organ toxic
+PASS Ray-picked drag / Organ
+PASS Ray-picked drag / Core
+PASS Three stages and return are reachable without grants
+PASS Return requires completed orders and resources
+PASS Minimal ending returns to menu
+PASS Windows V3 build

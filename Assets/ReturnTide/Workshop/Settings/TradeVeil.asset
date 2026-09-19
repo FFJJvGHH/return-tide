@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!28 &2800000
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TradeVeil
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 2
+  m_Width: 128
+  m_Height: 1
+  m_CompleteImageSize: 512
+  m_MipsStripped: 0
+  m_TextureFormat: 4
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMipmapLimit: 0
+  m_MipmapLimitGroupName: 
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_LightmapFormat: 0
+  m_ColorSpace: 1
+  m_PlatformBlob: 
+  image data: 512
+  _typelessdata: 060b0ff0060b0fee060b0fec060b0fe9060b0fe7060b0fe5060b0fe3060b0fe1060b0fdf060b0fdd060b0fdb060b0fd9060b0fd7060b0fd5060b0fd3060b0fd1060b0fcf060b0fcd060b0fcb060b0fc9060b0fc7060b0fc4060b0fc2060b0fc0060b0fbe060b0fbc060b0fba060b0fb8060b0fb6060b0fb4060b0fb2060b0fb0060b0fae060b0fac060b0faa060b0fa8060b0fa6060b0fa4060b0fa2060b0fa0060b0f9e060b0f9c060b0f9a060b0f98060b0f96060b0f94060b0f92060b0f90060b0f8e060b0f8c060b0f8a060b0f88060b0f86060b0f84060b0f82060b0f80060b0f7e060b0f7c060b0f7b060b0f79060b0f77060b0f75060b0f73060b0f71060b0f6f060b0f6d060b0f6b060b0f69060b0f67060b0f65060b0f63060b0f61060b0f5f060b0f5e060b0f5c060b0f5a060b0f58060b0f56060b0f54060b0f52060b0f50060b0f4e060b0f4d060b0f4b060b0f49060b0f47060b0f45060b0f43060b0f41060b0f40060b0f3e060b0f3c060b0f3a060b0f38060b0f36060b0f35060b0f33060b0f31060b0f2f060b0f2d060b0f2c060b0f2a060b0f28060b0f26060b0f25060b0f23060b0f21060b0f1f060b0f1e060b0f1c060b0f1a060b0f19060b0f17060b0f15060b0f14060b0f12060b0f10060b0f0f060b0f0d060b0f0b060b0f0a060b0f08060b0f07060b0f05060b0f04060b0f02060b0f01060b0f00
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 

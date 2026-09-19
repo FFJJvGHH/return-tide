@@ -1,0 +1,71 @@
+PASS Title has exactly two texts: title and start
+PASS Fifteen separately editable anatomy parts
+PASS Camera poses and articulated character are serialized
+PASS Fresh run has no inventory or economy clutter
+PASS Soft fish starts with skin
+PASS Holding away from incision does not cut
+PASS Interrupted incision resets
+PASS Mouse ray and traced screen path remove Skin
+PASS Mouse ray and traced screen path remove Skin
+PASS Mouse ray and traced screen path remove Skin
+PASS Trace all skin paths to reveal muscle
+PASS Mouse ray and traced screen path remove Flesh
+PASS Mouse ray and traced screen path remove Flesh
+PASS Muscle dissection exposes three ribs
+PASS Intact bone cannot be lifted
+PASS Broken bone requires forceps
+PASS Screen drag deposits Bone in tray
+PASS Intact bone cannot be lifted
+PASS Broken bone requires forceps
+PASS Screen drag deposits Bone in tray
+PASS Intact bone cannot be lifted
+PASS Broken bone requires forceps
+PASS Screen drag deposits Bone in tray
+PASS Core remains hidden until search
+PASS Searching the correct organ reveals the core
+PASS Screen drag deposits Core in tray
+PASS Core and mutation materials are harvested
+PASS Cannot purchase without money
+PASS Fish products sell for configured prices
+PASS Repeated sale cannot duplicate money
+PASS Second arrival has an exoskeleton
+PASS Armor blocks crystal access
+PASS Unaffordable armored fish can be returned
+PASS Mouse ray and traced screen path remove Skin
+PASS Mouse ray and traced screen path remove Skin
+PASS Mouse ray and traced screen path remove Skin
+PASS Mouse ray and traced screen path remove Flesh
+PASS Mouse ray and traced screen path remove Flesh
+PASS Sales and mutation materials unlock laser
+PASS Owned tool cannot be purchased twice
+PASS Tentacled mutation enters sequence
+PASS Mouse ray and traced screen path remove Skin
+PASS Mouse ray and traced screen path remove Skin
+PASS Mouse ray and traced screen path remove Skin
+PASS Mouse ray and traced screen path remove Flesh
+PASS Mouse ray and traced screen path remove Flesh
+PASS Mouse ray and traced screen path remove Skin
+PASS Mouse ray and traced screen path remove Skin
+PASS Mouse ray and traced screen path remove Skin
+PASS Mouse ray and traced screen path remove Flesh
+PASS Mouse ray and traced screen path remove Flesh
+PASS Golden easter egg fish appears
+PASS Mouse ray and traced screen path remove Skin
+PASS Mouse ray and traced screen path remove Skin
+PASS Mouse ray and traced screen path remove Skin
+PASS Mouse ray and traced screen path remove Flesh
+PASS Mouse ray and traced screen path remove Flesh
+PASS Rare core has greater sale value
+PASS Peeler purchases consume money and materials
+PASS Peeler automates skin removal on next fish
+PASS Save data retains tools and current dissection progress
+PASS Mouse ray and traced screen path remove Flesh
+PASS Mouse ray and traced screen path remove Flesh
+PASS Armored fish reappears after upgrades
+PASS Laser actually opens the shell
+PASS Mouse ray and traced screen path remove Flesh
+PASS Mouse ray and traced screen path remove Flesh
+PASS Return is reachable through normal earnings
+PASS Repairing signal starts return sequence
+PASS Return ends at a minimal two-item menu
+PASS Windows workshop build succeeds

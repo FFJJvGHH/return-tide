@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!28 &2800000
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MenuVeil
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 2
+  m_Width: 128
+  m_Height: 1
+  m_CompleteImageSize: 512
+  m_MipsStripped: 0
+  m_TextureFormat: 4
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMipmapLimit: 0
+  m_MipmapLimitGroupName: 
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_LightmapFormat: 0
+  m_ColorSpace: 1
+  m_PlatformBlob: 
+  image data: 512
+  _typelessdata: 06141ad106141ace06141acc06141ac906141ac706141ac406141ac206141abf06141abc06141aba06141ab706141ab506141ab206141ab006141aad06141aab06141aa906141aa606141aa406141aa106141a9f06141a9d06141a9a06141a9806141a9606141a9306141a9106141a8f06141a8c06141a8a06141a8806141a8606141a8306141a8106141a7f06141a7d06141a7b06141a7906141a7606141a7406141a7206141a7006141a6e06141a6c06141a6a06141a6806141a6606141a6406141a6206141a6006141a5e06141a5c06141a5a06141a5806141a5606141a5406141a5206141a5106141a4f06141a4d06141a4b06141a4906141a4806141a4606141a4406141a4206141a4106141a3f06141a3d06141a3c06141a3a06141a3806141a3706141a3506141a3406141a3206141a3106141a2f06141a2e06141a2c06141a2b06141a2906141a2806141a2606141a2506141a2406141a2206141a2106141a2006141a1e06141a1d06141a1c06141a1b06141a1906141a1806141a1706141a1606141a1506141a1406141a1306141a1206141a1106141a1006141a0f06141a0e06141a0d06141a0c06141a0b06141a0a06141a0906141a0806141a0806141a0706141a0606141a0506141a0506141a0406141a0406141a0306141a0306141a0206141a0206141a0106141a0106141a0106141a0006141a0006141a00
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 

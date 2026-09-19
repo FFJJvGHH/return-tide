@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81fa12ce377603f43b17c97e3430f6e7, type: 3}
+  m_Name: Balance
+  m_EditorClassIdentifier: 
+  meatValue: 12
+  skinValue: 5
+  boneValue: 4
+  coreValue: 85
+  mutationValue: 28
+  laserPrice: 180
+  laserParts: 2
+  peelerPrice: 130
+  peelerParts: 1
+  scannerPrice: 90
+  knifePrice: 65
+  returnPrice: 650
+  returnParts: 3
+  pathTolerance: 0.25
+  laserSeconds: 1.2
+  dragHeight: 0.65
+  boneHits: 3

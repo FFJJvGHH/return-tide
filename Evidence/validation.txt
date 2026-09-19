@@ -1,0 +1,17 @@
+PASS Four removable lesions exist
+PASS Four enemies exist
+PASS Bioluminescent material has emission enabled
+PASS Merchant exists
+PASS No missing materials
+PASS Opening transitions into gameplay
+PASS Player starts healthy
+PASS Inventory hidden before collection
+PASS Trade requires samples
+PASS All three lesions can be excised
+PASS Excision creates three physical sample pickups
+PASS Proximity pickup reveals inventory
+PASS Merchant exchanges three samples for stabilizer
+PASS Core cure opens return portal
+PASS Checkpoint restores health
+PASS Return reaches lakeside epilogue
+PASS Windows player builds successfully

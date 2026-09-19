@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec505768f7ce36c4792774cd8f07f380, type: 3}
+  m_Name: Specimen_Crystal
+  m_EditorClassIdentifier: 
+  displayName: "\u68D8\u6676\u9CD0"
+  handlingClue: "\u8106\u6676 / \u4FDD\u6301\u7EAF\u5EA6"
+  family: 3
+  corePrice: 350
+  meatYield: 1
+  boneHits: 2
+  toxicOrgan: -1
+  machinePurityLoss: 10
+  requiredOrders: 2

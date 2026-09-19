@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec505768f7ce36c4792774cd8f07f380, type: 3}
+  m_Name: Specimen_Armor
+  m_EditorClassIdentifier: 
+  displayName: "\u9508\u7532\u9B5F"
+  handlingClue: "\u539A\u7532 / \u9700\u8981\u6FC0\u5149"
+  family: 1
+  corePrice: 170
+  meatYield: 1
+  boneHits: 4
+  toxicOrgan: -1
+  machinePurityLoss: 0
+  requiredOrders: 0
