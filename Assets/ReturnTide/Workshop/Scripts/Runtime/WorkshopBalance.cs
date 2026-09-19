@@ -14,8 +14,9 @@ namespace ReturnTide.Workshop {
  [System.Serializable] public class WorkshopSave {
   public int version=2,coins,parts,deliveries,specimenIndex;public bool laser,peeler,scanner,knife,everSold;
   public int meat,skin,bone,cores,coreValue;public System.Collections.Generic.List<string> removed=new System.Collections.Generic.List<string>();
-  public bool peelerEnabled=true,machineApplied;public int orders,familyIndex=-1,purity=100;public System.Collections.Generic.List<int> coreQualities=new System.Collections.Generic.List<int>();public System.Collections.Generic.List<int> corePrices=new System.Collections.Generic.List<int>();
+  public int learnedTools=1;public bool peelerEnabled=true,machineApplied;public int orders,familyIndex=-1,purity=100;public System.Collections.Generic.List<int> coreQualities=new System.Collections.Generic.List<int>();public System.Collections.Generic.List<int> corePrices=new System.Collections.Generic.List<int>();
  }
 }
+
 
 

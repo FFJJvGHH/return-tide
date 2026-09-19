@@ -11,7 +11,7 @@ using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 using Object=UnityEngine.Object;
 namespace ReturnTide.Workshop.Editor {
- public static class WorkshopBuilder {
+ public static partial class WorkshopBuilder {
   public const string Root="Assets/ReturnTide/Workshop";
   public const string ScenePath=Root+"/Scenes/Workshop.unity";
   static Dictionary<string,Material> mats=new Dictionary<string,Material>();static Mesh stone;static WorkshopGame game;
@@ -23,7 +23,7 @@ namespace ReturnTide.Workshop.Editor {
    var scene=EditorSceneManager.NewScene(NewSceneSetup.EmptyScene,NewSceneMode.Single);
    game=Node("Workshop · 流程 / 经济 / 存档").AddComponent<WorkshopGame>();
    var balance=AssetDatabase.LoadAssetAtPath<WorkshopBalance>(Root+"/Settings/Balance.asset");if(!balance){balance=ScriptableObject.CreateInstance<WorkshopBalance>();AssetDatabase.CreateAsset(balance,Root+"/Settings/Balance.asset");}game.balance=balance;game.audioSource=game.gameObject.AddComponent<AudioSource>();
-   Room();RefineRoom();Lights();BuildResearcher();BuildCamera();BuildSpecimen();BuildTools();BuildUI();
+   Room();RefineRoom();Lights();BuildResearcher();BuildCamera();BuildSpecimen();BuildTools();BuildUI();BuildFeedback();
    var ambiance=Node("夜间声景").AddComponent<AudioSource>();ambiance.clip=AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/ReturnTide/Audio/Belly_Ambience.wav");ambiance.loop=true;ambiance.playOnAwake=true;ambiance.volume=.35f;
    EditorSceneManager.SaveScene(scene,ScenePath);EditorBuildSettings.scenes=new[]{new EditorBuildSettingsScene(ScenePath,true)};
    PlayerSettings.defaultScreenWidth=1600;PlayerSettings.defaultScreenHeight=900;PlayerSettings.fullScreenMode=FullScreenMode.Windowed;
@@ -144,7 +144,7 @@ namespace ReturnTide.Workshop.Editor {
    var root=Node("03 · 镜头机位 / 可在 Scene 中调整").transform;
    var camGO=Node("Main Camera");camGO.tag="MainCamera";var camera=camGO.AddComponent<Camera>();camera.clearFlags=CameraClearFlags.SolidColor;camera.backgroundColor=C("101F2B");camera.fieldOfView=43;camera.nearClipPlane=.1f;camera.farClipPlane=75;camera.allowHDR=true;
    var data=camGO.AddComponent<UniversalAdditionalCameraData>();data.renderPostProcessing=true;data.antialiasing=AntialiasingMode.SubpixelMorphologicalAntiAliasing;camGO.AddComponent<AudioListener>();
-   var rig=camGO.AddComponent<WorkshopCamera>();game.cameraRig=rig;
+   var rig=camGO.AddComponent<WorkshopCamera>();game.cameraRig=rig;rig.game=game;
    rig.titlePose=Pose("标题 · 房间全景",root,new Vector3(9,7.2f,-11.5f),new Vector3(.3f,1.4f,1));rig.benchPose=Pose("解剖 · 固定特写",root,new Vector3(1.2f,7.8f,-6.7f),new Vector3(0,1.15f,.20f));rig.tradePose=Pose("交易 · 鱼贩子",root,new Vector3(7.2f,4.0f,-3.7f),new Vector3(3.7f,1.55f,2.8f));rig.returnPose=Pose("回归 · 湖岸门",root,new Vector3(6.8f,3.5f,-.5f),new Vector3(1.8f,1.45f,5));rig.SetView(WorkshopView.Title,true);
   }
   static Transform Pose(string name,Transform root,Vector3 position,Vector3 look){var t=Node(name,root,position).transform;t.LookAt(look);return t;}
@@ -155,13 +155,13 @@ namespace ReturnTide.Workshop.Editor {
    string[] files={"Specimen_Reef","Specimen_Armor","Specimen_Venom","Specimen_Crystal"};string[] names={"鳃鳞鲈","锈甲魟","灯囊鳗","棘晶鳐"};string[] clues={"稳定鱼肉","厚甲 / 需要激光","毒囊 / 隔离操作","脆晶 / 保持纯度"};
    string profilePath=Root+"/Settings/"+files[family]+".asset";var profile=AssetDatabase.LoadAssetAtPath<SpecimenProfile>(profilePath);if(!profile){profile=ScriptableObject.CreateInstance<SpecimenProfile>();profile.displayName=names[family];profile.handlingClue=clues[family];profile.family=family;profile.corePrice=new[]{85,170,230,350}[family];profile.meatYield=family==0?2:1;profile.boneHits=family==1?4:family==3?2:3;profile.toxicOrgan=family==2?1:-1;profile.machinePurityLoss=family==2?18:family==3?10:0;profile.requiredOrders=family<2?0:family-1;AssetDatabase.CreateAsset(profile,profilePath);}
    var root=Node(names[family]+" · 分层标本",null,game.specimenAnchor.position);var model=Model(Root+"/Models/"+files[family]+".fbx",root.transform,Vector3.zero);
-   var specimen=root.AddComponent<WorkshopSpecimen>();specimen.profile=profile;if(family==0)game.specimen=specimen;var parts=new List<WorkshopPart>();
+   var specimen=root.AddComponent<WorkshopSpecimen>();specimen.breathingBody=model.GetComponentsInChildren<Transform>(true).First(t=>t.name=="Permanent");specimen.finVisuals=model.GetComponentsInChildren<Transform>(true).Where(t=>t.name.StartsWith("PectoralFin")).ToArray();specimen.profile=profile;if(family==0)game.specimen=specimen;var parts=new List<WorkshopPart>();
    string[] layers={"Shell","Skin","Flesh","Bone","Organ","Crystal"};
    foreach(var t in model.GetComponentsInChildren<Transform>().ToArray()){
     int layer=Array.FindIndex(layers,p=>t.name.StartsWith(p+"_")||t.name==p);if(layer<0)continue;
     var renderers=t.GetComponentsInChildren<Renderer>();if(renderers.Length==0)continue;Bounds bounds=renderers[0].bounds;foreach(var r in renderers)bounds.Encapsulate(r.bounds);
     var wrapper=Node(t.name+" · 可操作",root.transform);wrapper.transform.position=bounds.center;t.SetParent(wrapper.transform,true);
-    var part=wrapper.AddComponent<WorkshopPart>();part.specimen=specimen;part.layer=(TissueLayer)layer;var box=wrapper.AddComponent<BoxCollider>();box.size=bounds.size+Vector3.one*.025f;part.hitbox=box;
+    var part=wrapper.AddComponent<WorkshopPart>();part.specimen=specimen;part.layer=(TissueLayer)layer;part.incision=FeedbackLine("已划开的切口",wrapper.transform,.023f);part.incision.enabled=false;part.fracture=FeedbackLine("骨裂纹",wrapper.transform,.017f);part.fracture.startColor=part.fracture.endColor=C("544D44");part.fracture.enabled=false;var box=wrapper.AddComponent<BoxCollider>();box.size=bounds.size+Vector3.one*.025f;part.hitbox=box;
     if(layer==1||layer==2){var points=t.GetComponentsInChildren<Transform>().Where(child=>child.name.StartsWith("Cut")).OrderBy(child=>child.name).ToList();if(points.Count!=5)throw new Exception("Missing sculpted incision points: "+t.name);part.cutPath=points.ToArray();
      var line=Node("切线",wrapper.transform).AddComponent<LineRenderer>();line.sharedMaterial=mats["Gold"];line.startWidth=line.endWidth=.015f;line.useWorldSpace=true;line.positionCount=5;for(int j=0;j<5;j++)line.SetPosition(j,points[j].position);part.cutGuide=line;part.cutCursor=Shape("切口起点",wrapper.transform,Vector3.zero,Vector3.one*.045f,"Glow").transform;part.cutCursor.position=points[0].position;
     }
@@ -226,6 +226,7 @@ namespace ReturnTide.Workshop.Editor {
   static void Hot(GameObject go,WorkshopAction action,string label,Vector3 size){var h=go.AddComponent<WorkshopHotspot>();h.action=action;h.label=label;var c=go.AddComponent<BoxCollider>();c.size=size;}
  }
 }
+
 
 
 

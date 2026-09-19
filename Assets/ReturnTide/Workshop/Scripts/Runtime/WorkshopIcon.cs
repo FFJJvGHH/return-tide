@@ -3,10 +3,13 @@ using UnityEngine.UI;
 namespace ReturnTide.Workshop {
  public enum TideGlyph { Scalpel,Hammer,Forceps,Laser,Meat,Bone,Organ,Crystal,Coin,Skin,Bell,Fish,Arrow,Warning,Purity,Scanner,Check,Lock,Mouse,Order,Tray }
  [AddComponentMenu("Return Tide/Vector Icon")]
+ [RequireComponent(typeof(CanvasRenderer))]
  public class WorkshopIcon:MaskableGraphic {
   public TideGlyph glyph;
   [Range(0,1)]public float fill=1;
   public float stroke=2.2f;
+  public int GeneratedVertices{get;private set;}
+  protected WorkshopIcon(){useLegacyMeshGeneration=false;}
   VertexHelper mesh;Vector2 origin;float unit;
   protected override void OnPopulateMesh(VertexHelper vh){mesh=vh;vh.Clear();Rect r=rectTransform.rect;origin=r.center;unit=Mathf.Min(r.width,r.height)/32f;
    switch(glyph){
@@ -30,7 +33,7 @@ namespace ReturnTide.Workshop {
     case TideGlyph.Mouse:Ellipse(0,0,8,12);Line(0,11,0,2);Line(-7,2,7,2);Poly(new[]{new Vector2(-6,3),new Vector2(-5,8),new Vector2(-1,10),new Vector2(-1,3)});break;
     case TideGlyph.Order:Line(-9,-13,-9,12);Line(-9,12,9,12);Line(9,12,9,-13);Line(9,-13,-9,-13);Line(-4,6,5,6,1.4f);Line(-4,1,5,1,1.4f);Line(-4,-5,1,-5,1.4f);break;
     case TideGlyph.Tray:Arc(0,0,12,180,360);Line(-12,0,12,0);Line(-8,-12,8,-12);break;
-   }
+   }GeneratedVertices=vh.currentVertCount;
   }
   void V(Vector2 p,Color c){mesh.AddVert(origin+p*unit,c,Vector2.zero);}
   void Line(float ax,float ay,float bx,float by,float width=-1,Color? tint=null){Vector2 a=new Vector2(ax,ay),b=new Vector2(bx,by);Vector2 n=new Vector2(-(b-a).y,(b-a).x).normalized*(width<0?stroke:width)*.5f;int k=mesh.currentVertCount;Color c=tint??color;V(a-n,c);V(a+n,c);V(b+n,c);V(b-n,c);mesh.AddTriangle(k,k+1,k+2);mesh.AddTriangle(k,k+2,k+3);}

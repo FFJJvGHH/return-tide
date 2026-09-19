@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 771d177ca1131e146a207350a8ddb451, type: 3}
+  m_Name: Feedback
+  m_EditorClassIdentifier: 
+  idleCueDelay: 2.5
+  cueRepeatSeconds: 4.5
+  peelDuration: 0.82
+  pluckDuration: 0.62
+  popupSeconds: 2
+  impact: 0.035
+  coreFocus: 1.7
+  reducedMotion: 0
+  mint: {r: 0.55, g: 0.95, b: 0.78, a: 1}
+  gold: {r: 0.95, g: 0.74, b: 0.4, a: 1}
+  warning: {r: 1, g: 0.48, b: 0.3, a: 1}
+  slice: {fileID: 8300000, guid: 7002ec9ef4557da4e8a984f2b88f3d9e, type: 3}
+  peel: {fileID: 8300000, guid: 8837a268a2b2d8c47b46a59e3731c53b, type: 3}
+  pluck: {fileID: 8300000, guid: 54aa7154c2cfc04498ce08fc7163ee91, type: 3}
+  crack: {fileID: 8300000, guid: 5c0dd6bee99ab1c42a36374f4d8482fc, type: 3}
+  ceramic: {fileID: 8300000, guid: 7c49c3fcabf0577438941fe28f34325d, type: 3}
+  coin: {fileID: 8300000, guid: e84e4b1bab18bf54893085527b35def7, type: 3}
+  core: {fileID: 8300000, guid: 55faa83074c26ca46a0505475f5b411c, type: 3}
+  deny: {fileID: 8300000, guid: 16d9014517eb6744fbc92f0fc0a67488, type: 3}
+  unlock: {fileID: 8300000, guid: df2934f899ba3a34b9a9fa31778489d4, type: 3}
+  flutter: {fileID: 8300000, guid: 13bc58f5d9766424687f4b07a6122bee, type: 3}

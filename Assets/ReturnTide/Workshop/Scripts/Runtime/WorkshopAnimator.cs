@@ -5,7 +5,7 @@ namespace ReturnTide.Workshop {
   public Transform[] eyes;
   public Vector3 target;
   public float breathing=.012f,reach=1.15f;
-  Vector3 rootScale;Vector3[] eyeScales;Quaternion headRest;float actionUntil,nodUntil;WorkshopTool action;bool gripping;
+  Vector3 rootScale;Vector3[] eyeScales;Quaternion headRest;float actionUntil,nodUntil,startleUntil;WorkshopTool action;bool gripping;
   void Awake(){rootScale=model.localScale;headRest=headPivot.localRotation;eyeScales=new Vector3[eyes.Length];for(int i=0;i<eyes.Length;i++)eyeScales[i]=eyes[i].localScale;target=transform.position+transform.forward;}
   void Update(){
    model.localScale=new Vector3(rootScale.x,rootScale.y*(1+Mathf.Sin(Time.time*1.6f)*breathing),rootScale.z);
@@ -15,6 +15,7 @@ namespace ReturnTide.Workshop {
    Vector3 leftTarget=transform.position+transform.forward*.78f-transform.right*.30f+Vector3.up*1.25f;
    Vector3 rightTarget=rightShoulder.position+Vector3.ClampMagnitude(target-rightShoulder.position,reach);
    rightTarget.y=Mathf.Max(transform.position.y+1.16f,rightTarget.y);
+   if(Time.time<startleUntil){float flinch=Mathf.Sin(Mathf.Clamp01((startleUntil-Time.time)/.55f)*Mathf.PI);leftTarget-=transform.forward*flinch*.18f;rightTarget-=transform.forward*flinch*.22f;rightTarget+=Vector3.up*flinch*.1f;}
    float remaining=Mathf.Clamp01((actionUntil-Time.time)/.3f);float stroke=Mathf.Sin(remaining*Mathf.PI);
    if(action==WorkshopTool.Hammer)rightTarget+=Vector3.up*stroke*.5f;else rightTarget+=transform.forward*stroke*.12f;
    PoseArm(leftShoulder,leftUpper,leftForearm,leftHand,leftTarget,-1);PoseArm(rightShoulder,rightUpper,rightForearm,rightHand,rightTarget,1);
@@ -28,5 +29,6 @@ namespace ReturnTide.Workshop {
   public void Action(WorkshopTool tool){action=tool;actionUntil=Time.time+.3f;}
   public void Grip(bool value){gripping=value;}
   public void Nod(){nodUntil=Time.time+.8f;}
+  public void Startle(){startleUntil=Time.time+.55f;nodUntil=Time.time+.25f;}
  }
 }
